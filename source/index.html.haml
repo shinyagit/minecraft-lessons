@@ -1,0 +1,13 @@
+---
+title: マインクラフトコース
+---
+.content1
+
+.squares-container
+  - for num in 1 .. 40
+    = link_to "/pdf/lesson#{num}.pdf", class: "item item#{num}" do
+      %div
+        %h2
+          %span #{num}
+          %br
+          Lesson
