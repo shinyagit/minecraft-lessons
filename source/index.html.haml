@@ -2,10 +2,12 @@
 title: マインクラフトコース
 ---
 .content1
+  .logo
+    %img{:src => "/images/TechChanceLogo.svg"}/
 
 .squares-container
   - for num in 1 .. 40
-    = link_to "/pdf/lesson#{num}.pdf", class: "item item#{num}" do
+    = link_to "#{config[:root]}/slide/lesson#{num}/", class: "item item#{num}" do
       %div
         %h2
           %span #{num}

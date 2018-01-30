@@ -18,6 +18,9 @@ page '/*.txt', layout: false
 # 別レイアウトを一括指定
 page '/contents/*', layout: 'contents_layout'
 
+activate :relative_assets
+set :relative_links, true
+
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
@@ -49,6 +52,8 @@ configure :build do
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
+
+  config[:root] = "/domain"
 
   # リポジトリ名を host に設定しておく
   # こうすることで stylesheet_link_tag などで展開されるパスが

@@ -1,5 +1,6 @@
 %header#header
-  %h2 マインクラフトコース
+  = link_to "#{config[:root]}/", class: "homelink" do
+    %h2 マインクラフトコース
 
 #drw-btn
   %span.icon-bar
@@ -7,7 +8,6 @@
   %span.icon-bar
 %nav#nav-menu
   %ul
-    %li= link_to 'TechChance!Webサイト', 'https://techchance.jp', target: "_blank"
-
-
+    %li
+      = link_to "トップページ", "#{config[:root]}/"
 #drw-layer

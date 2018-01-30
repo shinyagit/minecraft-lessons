@@ -21,9 +21,6 @@
     -# %meta{content: '@twitter_acount' name: 'twitter:site'}
     %title= current_page.data.title + ' | Tech Chance!' || 'Tech Chance!'
     -# import css files
-    = stylesheet_link_tag 'reset'
-    = stylesheet_link_tag 'base'
-    = stylesheet_link_tag 'partials'
     = stylesheet_link_tag 'site'
     -# favicon の一括生成はこちらから https://ao-system.net/favicon/
     -# html to haml http://htmltohaml.com/
@@ -31,9 +28,10 @@
     = partial 'partials/header'
     -# = partial 'partials/main-visual'
     #two-column-wrapper
+      #info ※掲載内容の無断複製・転載・配布行為を禁止します。
       #main
         = yield
-      #sidebar
+      -# #sidebar
         = partial 'partials/sidebar'
     = partial 'partials/footer'
 
@@ -43,5 +41,6 @@
 
     -# import jquery
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+    %script{:src => "https://use.fontawesome.com/f8a9175ca2.js"}
     -# import javascript files
     = javascript_include_tag 'site'
