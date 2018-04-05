@@ -64,6 +64,7 @@ body {background-color: #eee;}
     width: 20%;
     color: #333;
     text-decoration: none;
+    font-family: 'Gabriola','Zapfino','Bradley Hand',sans-serif;
 
     &::before {
       display: block;
@@ -72,7 +73,6 @@ body {background-color: #eee;}
     }
 
     &:hover {
-
       div {border-radius: 50%;}
     }
 
@@ -105,6 +105,20 @@ body {background-color: #eee;}
           font-size: 40px;
         }
       }
+    }
+  }
+
+  .item-gray-out {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    &:hover {
+      div {border-radius: 0%;}
+    }
+
+    div {
+      color: #fff;
+      background-image: linear-gradient(to bottom, rgba(#333, 0.2), rgba(#333, 0.2)), url(/images/minecraft-texture.jpg);
     }
   }
 }
