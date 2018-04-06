@@ -61,10 +61,10 @@ body {background-color: #eee;}
     z-index: 5;
     display: block;
     position: relative;
-    width: 20%;
+    width: 25%;
     color: #333;
     text-decoration: none;
-    font-family: 'Gabriola','Zapfino','Bradley Hand',sans-serif;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
 
     &::before {
       display: block;
@@ -98,10 +98,8 @@ body {background-color: #eee;}
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-family: fantasy;
 
         span {
-          font-family: fantasy;
           font-size: 40px;
         }
       }
@@ -121,10 +119,51 @@ body {background-color: #eee;}
       background-image: linear-gradient(to bottom, rgba(#333, 0.2), rgba(#333, 0.2)), url(/images/minecraft-texture.jpg);
     }
   }
+
+  .initial-item {
+    width: 50%;
+
+
+    div{
+      transition: all .5s;
+
+      h2 {
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+    }
+
+    &:hover div {
+      border-radius: 0%;
+      animation: didder .2s ease 0s infinite normal;
+    }
+  }
+
+  .item-left div {
+    background: radial-gradient(rgba(#D76820, 0.5), rgba(#D76820, 0.9));
+  }
+
+  .item-right div {
+    background: radial-gradient(rgba(#1A7BBD, 0.5), rgba(#1A7BBD, 0.9));
+  }
+}
+
+@keyframes didder {
+  0% {transform: translate(2px, 1px);}
+  20% {transform: translate(0px, -1px);}
+  40% {transform: translate(1px, 2px);}
+  60% {transform: translate(-2px, 0px);}
+  80% {transform: translate(1px, 1px);}
+  100% {transform: translate(2px, 1px);}
 }
 
 @media screen and (max-width: 800px) {
   #main .squares-container .item {width: 33%;}
+  #main .squares-container .initial-item {width: 50%;}
+  #main .squares-container .item h2 {font-size: 14px !important;}
 }
 // ================= sidebar config ==================
 

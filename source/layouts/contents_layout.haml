@@ -19,7 +19,7 @@
     -# %meta{property: 'fb:app_id', content: ''}
     -# %meta{content: 'summary' name: 'twitter:card'}
     -# %meta{content: '@twitter_acount' name: 'twitter:site'}
-    %title= current_page.data.title + ' | サイト名' || 'サイト名'
+    %title= current_page.data.title + ' | マインクラフトでプログラミング' || 'Tech Chance!'
     -# import css files
     = stylesheet_link_tag 'reset'
     = stylesheet_link_tag 'base'
@@ -32,10 +32,11 @@
   %body
     = partial 'partials/header'
     #two-column-wrapper
+      #info ※掲載内容の無断複製・転載・配布行為を禁止します。
       #main
         = yield
-      #sidebar
-        = partial 'partials/sidebar'
+      -# #sidebar
+      -#   = partial 'partials/sidebar'
     = partial 'partials/footer'
 
     -# if it IE 9
