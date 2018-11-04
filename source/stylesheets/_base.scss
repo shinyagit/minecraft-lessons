@@ -78,9 +78,10 @@ body {background-color: #eee;}
       opacity: 0.7;
     }
 
-    &.basic {background: linear-gradient(to right, #FF512F, #F09819);}
-    &.standard {background: linear-gradient(to right, #2C3E50, #4CA1AF);}
-    &.advanced {background: linear-gradient(to right, #4776E6, #8E54E9);}
+    &.basic {background: $basic-grad;}
+    &.standard {background: $standard-grad;}
+    &.advanced {background: $advanced-grad;}
+    &.pro {background: $pro-grad;}
   }
 
 
@@ -100,7 +101,10 @@ body {background-color: #eee;}
     }
 
     &:hover {
-      div {border-radius: 50%;}
+      div {
+        border-radius: 25% 0 25% 0;
+        opacity: 0.8;
+      }
     }
 
     div {
@@ -113,13 +117,34 @@ body {background-color: #eee;}
       background-image: linear-gradient(to bottom, rgba(#fff, 0.5), rgba(#fff, 0.5)), url(/images/minecraft-texture.jpg);
       background-size: cover;
       background-position: center;
-      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+      // box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+
+      &.stage {
+        color: #fff;
+        text-shadow: 0 0 1px #333;
+        background-size: cover;
+        background-position: center;
+
+        &.basic {background: url(/images/orange.png);}
+        &.standard {background: url(/images/green.png);}
+        &.advanced {background: url(/images/red.png);}
+        &.pro {background: url(/images/blue.png);}
+
+        // &.basic {background: $basic-grad;}
+        // &.standard {background: $standard-grad;}
+        // &.advanced {background: $advanced-grad;}
+        // &.pro {background: $pro-grad;}
+        // &.basic {background-image: linear-gradient(to bottom, rgba(#fff, 0.5), rgba(#fff, 0.5)), url(/images/diamond.png);}
+        // &.standard {background-image: linear-gradient(to bottom, rgba(#fff, 0.5), rgba(#fff, 0.5)), url(/images/diamond.png);}
+        // &.advanced {background-image: linear-gradient(to bottom, rgba(#fff, 0.5), rgba(#fff, 0.5)), url(/images/diamond.png);}
+        // &.pro {background-image: linear-gradient(to bottom, rgba(#fff, 0.5), rgba(#fff, 0.5)), url(/images/diamond.png);}
+      }
 
       h2 {
         line-height: 1.5;
         z-index: 20;
         position: absolute;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: bold;
         text-align: center;
         top: 50%;
@@ -127,7 +152,7 @@ body {background-color: #eee;}
         transform: translate(-50%, -50%);
 
         span {
-          font-size: 40px;
+          font-size: 32px;
         }
       }
     }
@@ -178,6 +203,33 @@ body {background-color: #eee;}
   }
 }
 
+#main .squares-container .item .logo-img {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: url(/images/TechChanceLogo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover {
+    border-radius: 0;
+  }
+}
+#main .squares-container .item.initial {
+  width: 100%;
+  &::before {
+    display: block;
+    content: "";
+    padding-top: 100px;
+  }
+  &::hover {
+    border-radius: 0;
+  }
+}
+
+
 @keyframes didder {
   0% {transform: translate(2px, 1px);}
   20% {transform: translate(0px, -1px);}
@@ -188,9 +240,9 @@ body {background-color: #eee;}
 }
 
 @media screen and (max-width: 800px) {
-  #main .squares-container .item {width: 33%;}
+  #main .squares-container .item {width: 50%;}
   #main .squares-container .initial-item {width: 50%;}
-  #main .squares-container .item h2 {font-size: 14px !important;}
+  #main .squares-container .item h2 {font-size: 16px !important;}
 }
 // ================= sidebar config ==================
 

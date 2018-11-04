@@ -2,24 +2,13 @@
 title: Stage2
 ---
 
-.content1
-  .logo
-    %img{:src => "/images/TechChanceLogo.svg"}/
+-# .content1
+-#   .logo
+-#     %img{:src => "/images/TechChanceLogo.svg"}/
 
 .squares-container
-  = link_to "https://hackmd.io/VuXxTX4ZT46m3ia-uar1bw", target: "_blank", class: "item" do
-    %div
-      %h2
-        %span 9
-        %br
-        Lesson
-
-  = link_to "https://hackmd.io/5xK0Pe16S9-BnHgyKHDcbA", target: "_blank", class: "item" do
-    %div
-      %h2
-        %span 10
-        %br
-        Lesson
+  = link_to "#{config[:root]}/", class: "item" do
+    .logo-img
 
   = link_to "https://hackmd.io/LQhta0DMRZKnM-iun0rGSg", target: "_blank", class: "item" do
     %div
@@ -63,6 +52,39 @@ title: Stage2
         %br
         Lesson
 
-  = link_to "#{config[:root]}/contents/advanced/", class: "contents-list advanced" do
+  = link_to "https://hackmd.io/lIR4OqQvQH25-DXt_N4udA", target: "_blank", class: "item" do
     %div
-      Lesson 17 ~ 24
+      %h2
+        %span 17
+        %br
+        Lesson
+
+  = link_to "https://hackmd.io/bA8rawUHQpCEPp7ffxoMGQ", target: "_blank", class: "item" do
+    %div
+      %h2
+        %span 18
+        %br
+        Lesson
+
+  = link_to "https://hackmd.io/qWF6OKTjTXiSfcWTYKkgUw", target: "_blank", class: "item" do
+    %div
+      %h2
+        %span 19
+        %br
+        Lesson
+
+  = link_to "https://hackmd.io/qaY8rkTWSyCFPRM3WyHXig", target: "_blank", class: "item" do
+    %div
+      %h2
+        %span 20
+        %br
+        Lesson
+
+  = link_to "#{config[:root]}/contents/advanced/", class: "item nextpage" do
+    .stage.advanced
+      %h2
+        %span 21-30
+        %br
+        NEXT
+
+  

@@ -1,22 +1,43 @@
 ---
 title: マインクラフトコース
 ---
-.content1
-  .logo
-    %img{:src => "/images/TechChanceLogo.svg"}/
+-# .content1
+-#   .logo
+-#     %img{:src => "/images/TechChanceLogo.svg"}/
 
 .squares-container
-  = link_to "#{config[:root]}/contents/basic/", class: "contents-list basic" do
-    %div
-      Lesson 1 ~ 8
+  = link_to "#{config[:root]}/", class: "item initial" do
+    .logo-img
 
-  = link_to "#{config[:root]}/contents/standard/", class: "contents-list standard" do
-    %div
-      Lesson 9 ~ 16
+  = link_to "#{config[:root]}/contents/basic/", class: "item" do
+    .stage.basic
+      %h2
+        LESSON
+        %br
+        %span 1-10
+        
+  = link_to "#{config[:root]}/contents/standard/", class: "item" do
+    .stage.standard
+      %h2
+        LESSON
+        %br
+        %span 11-20
 
-  = link_to "#{config[:root]}/contents/advanced/", class: "contents-list advanced" do
-    %div
-      Lesson 17 ~ 24
+  = link_to "#{config[:root]}/contents/advanced/", class: "item" do
+    .stage.advanced
+      %h2
+        LESSON
+        %br
+        %span 21-30
+        
+
+  = link_to "#{config[:root]}/contents/advanced/", class: "item" do
+    .stage.pro
+      %h2
+        LESSON
+        %br
+        %span 31-40
+        
 
   -# = link_to "#{config[:root]}/contents/basic/", class: "item initial-item item-left" do
   -#   %div
@@ -32,3 +53,4 @@ title: マインクラフトコース
   -#       -# Atomエディタの
   -#       -# %br
   -#       -# 使い方講座
+
